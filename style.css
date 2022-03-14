@@ -14,14 +14,19 @@ nav{
 }
 ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
     margin-left: 80px;
     margin-right: 50px;
 }
+p{
+    display: flex;
+    justify-content: flex-end;
+}
 li{
+    margin: 20px;
     list-style-type: none;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 /* BARRE D'OUTILS */
@@ -29,7 +34,6 @@ li{
 .toolsBar{
     height: 720px;
     width: 200px;
-
     background: grey;
     display: flex;
     justify-content: center;
@@ -45,6 +49,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .carreNoir, .carreBlanc{
     width: 30px;
@@ -63,16 +68,19 @@ li{
 }
 
 /* FIGURES DANS BARRE D'OUTILS */
-.formeRetclangle{
+
+.formeRectlangle{
     width: 100px;
     height: 70px;
     border: 3px solid black;
+    cursor: pointer;
 }
 .formeRonde{
     width: 80px;
     height: 80px;
     border-radius: 50px;
     border: 3px solid black;
+    cursor: pointer;
 }
 .formeTriangle{
     width: 0;
@@ -81,11 +89,21 @@ li{
     border-right-width: 40px;
     border-left-width: 40px;
     border-bottom: 80px solid #000;
+    cursor: pointer;
 }
 .texte{
     font-size: 90px;
     color: black;
+    cursor: pointer;
 }
 
 /* DESSIN */
-
+.container{
+    display: flex;
+}
+.container1{
+    width: 100%;
+    height: 718px;
+    border: 1px dashed black;
+    position: relative;
+}
