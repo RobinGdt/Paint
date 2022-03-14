@@ -1,4 +1,4 @@
-const rectangle = document.querySelector('.formeRectlangle');
+const rectangle = document.querySelector('.formeRectangle');
 const draw = document.querySelector('.container1');
 
 // AJOUT DES EVENEMENTS DRAG 
@@ -18,40 +18,33 @@ draw.addEventListener('drop', dragDrop);
 
 
 function dragStart() {
-    console.log('dragover');
+    this.className += ' tenu';
 }
 
 function dragEnd() {
-    console.log('dragend');
 
-    this.className = 'formeRectangle';
 }
 
 function dragOver(e) {
-    console.log('dragover');
-
     e.preventDefault();
 
 };
+
 function dragEnter(e) {
-    console.log('dragenter');
-
     e.preventDefault();
-    this.className += 'hovered';
-
+    this.className += ' hovered';
 };
+
 function dragLeave() {
-    console.log('dragleave');
-
     this.className = 'container1';
 };
-function dragDrop() {
-    console.log('dragdrop');
 
+function dragDrop(e) {
     this.className = 'container1';
-    this.append(rectangle)
-};
+    this.append(rectangle);
+    let x = e.pageX;
+    let y = e.pageY;
 
-draw.addEventListener('mousedown', (e) => {
-    console.log(e);
-});
+    rectangle.style.top = y + "px";
+    rectangle.style.left = x + "px";
+};
